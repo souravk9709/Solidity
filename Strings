@@ -1,0 +1,25 @@
+contract A {
+    string public name;
+
+    function A(string _name) public {
+        name = _name;
+    }
+
+    function getName() public view returns (string) {
+        return name;
+    }
+}
+
+The above method is not working in Remix for now. So, the alternative is given below.
+
+contract A {
+    byte32 public name;
+
+    function A(byte32 _name) public {
+        name = _name;
+    }
+
+    function getName() public view returns (byte32) {
+        return name;
+    }
+}
