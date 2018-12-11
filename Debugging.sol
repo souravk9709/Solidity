@@ -4,18 +4,18 @@ contract Debugging {
     
     uint[] private vars;
     
-    function assignment() public pure {
+    function assignment() public pure {  //debugging in Stack
         uint myVal1 = 1;
         uint myVal2 = 2;
         assert(myVal1 == myVal2);
     }
     
-    function memoryAlloc() public pure {
+    function memoryAlloc() public pure {  //debugging in Memory
         string memory myString = "test";
         assert(bytes(myString).length == 10);
     }
     
-    function storageAlloc() public {
+    function storageAlloc() public {  //debugging in Storage
         vars.push(2);
         vars.push(3);
         assert(vars.length == 4);
